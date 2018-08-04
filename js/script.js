@@ -2,14 +2,40 @@
 
 // Create the array of quote objects and name it quotes
 
+var quotes [
+  {
+    quote:
+    source:
+  },
+  {
+    quote:
+    source:
+  },
+  {
+    quote:
+    source:
+  },
+  {
+    quote:
+    source:
+  },
+  {
+    quote:
+    source:
+  }
+];
 
+// Create the getRandomQuote function and name it getRandomQuote
 
-// Create the getRandomQuuote function and name it getRandomQuote
+function getRandomQuote() {
 
-
+}
 
 // Create the printQuote funtion and name it printQuote
 
+function print(quote) {
+  document.getElementById('loadQuote');
+}
 
 
 // This event listener will respond to "Show another quote" button clicks

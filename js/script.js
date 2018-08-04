@@ -2,38 +2,38 @@
 
 // Create the array of quote objects and name it quotes
 
-var quotes [
+var quotes = [
   {
-    quote:
-    source:
+    quote: "It's never too late to be who you might have been.",
+    source: "George Eliot"
   },
   {
-    quote:
-    source:
+    quote: "Have no fear of perfection, you'll never reach it.",
+    source: "Salvador Dali"
   },
   {
-    quote:
-    source:
+    quote: "It always seems impossible until it's done.",
+    source: "Nelson Mandela"
   },
   {
-    quote:
-    source:
+    quote: "Be the change you want to see in the world.",
+    source: "Mahatma Gandhi"
   },
   {
-    quote:
-    source:
+    quote: "If you can dream it you can do it.",
+    source: "Walt Disney"
   }
 ];
 
 // Create the getRandomQuote function and name it getRandomQuote
 
-function getRandomQuote() {
-
+function getRandomQuote(array) {
+  Math.floor(Math.random() * 5) + 1;
 }
 
 // Create the printQuote funtion and name it printQuote
 
-function print(quote) {
+function print(quotes) {
   document.getElementById('loadQuote');
 }
 

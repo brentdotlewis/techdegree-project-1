@@ -29,9 +29,9 @@ var quotes = [
 
 function getRandomQuote(quotes) {
   var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-  console.log(randomQuote);
+  return randomQuote;
 }
-getRandomQuote();
+console.log ( getRandomQuote(quotes) );
 
 /*
 // Create the printQuote funtion and name it printQuote

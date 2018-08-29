@@ -28,10 +28,10 @@ var quotes = [
 // Create the getRandomQuote function and name it getRandomQuote
 
 function getRandomQuote(quotes) {
-  var randomQuote = quotes(Math.floor(Math.random() * quotes.length));
+  var randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
   console.log(randomQuote);
 }
-
+getRandomQuote();
 
 /*
 // Create the printQuote funtion and name it printQuote

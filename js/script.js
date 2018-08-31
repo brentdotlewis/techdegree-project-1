@@ -5,12 +5,14 @@
 var quotes = [
   {
     quote: "It's never too late to be who you might have been.",
-    source: "George Eliot"
+    source: "George Eliot",
+    citation: "Literary News",
+    year: "June 1881"
   },
   {
     quote: "Have no fear of perfection, you'll never reach it.",
     source: "Salvador Dali",
-    citation: "WWW",
+    citation: "World wide web",
     year: "2018"
   },
   {
@@ -52,7 +54,7 @@ function getRandomQuote(quotes) {
 function printQuote () {
   var selectedQuote = getRandomQuote(quotes);
   var outputString = '<p class="quote">' + selectedQuote.quote + '</p>';
-      outputString += '<p class="source">' + selectedQuote.source;
+      outputString += '<p class="source">' + selectedQuote.source
       if (selectedQuote.citation) {
         outputString += '<span class="citation">' + selectedQuote.citation + '</span>';
       }

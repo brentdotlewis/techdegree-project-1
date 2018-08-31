@@ -9,7 +9,9 @@ var quotes = [
   },
   {
     quote: "Have no fear of perfection, you'll never reach it.",
-    source: "Salvador Dali"
+    source: "Salvador Dali",
+    citation: "WWW",
+    year: "2018"
   },
   {
     quote: "It always seems impossible until it's done.",
@@ -50,7 +52,13 @@ function getRandomQuote(quotes) {
 function printQuote () {
   var selectedQuote = getRandomQuote(quotes);
   var outputString = '<p class="quote">' + selectedQuote.quote + '</p>';
-      outputString += '<p class="source">' + selectedQuote.source + '</p>';
+      outputString += '<p class="source">' + selectedQuote.source;
+      if (selectedQuote.citation) {
+        outputString += '<span class="citation">' + selectedQuote.citation + '</span>';
+      }
+      if (selectedQuote.year) {
+        outputString += '<span class="year">' + selectedQuote.year + '</span>';
+      }'</p>'
   document.getElementById("quote-box").innerHTML = outputString;
 }
 

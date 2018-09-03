@@ -48,19 +48,6 @@ function getRandomQuote(quotes) {
   return randomQuote;
 }
 
-// Random Background Color Generator
-// Once user clicks on "show another quote" the backgound color will change
-
-function random_bg_color() {
-  var x = Math.floor(Math.random() * 256);
-  var y = Math.floor(Math.random() * 256);
-  var z = Math.floor(Math.random() * 256);
-  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    document.body.style.background = bgColor;
-    }
-document.getElementById('loadQuote').addEventListener("click", random_bg_color, false);
-
-
 // Create the printQuote funtion and name it printQuote
 
 function printQuote () {
@@ -76,7 +63,28 @@ function printQuote () {
   document.getElementById("quote-box").innerHTML = outputString;
 }
 
+// Random Background Color Generator
+// Once user clicks on "show another quote" the backgound color will change
+
+function random_bg_color() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    document.body.style.background = bgColor;
+    document.getElementById('loadQuote').style.backgroundColor = bgColor;
+  }
+  // document.getElementById('loadQuote').addEventListener("click", random_bg_color, false);
+
+// This function will reduce repetative code
+
+function clickHandler() {
+  random_bg_color();
+  printQuote();
+}
+document.getElementById('loadQuote').addEventListener('click', clickHandler, false);
+
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
-document.getElementById('loadQuote').addEventListener("click", printQuote, false);
+///// document.getElementById('loadQuote').addEventListener("click", printQuote, false);

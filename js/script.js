@@ -7,37 +7,45 @@ var quotes = [
     quote: "It's never too late to be who you might have been.",
     source: "George Eliot",
     citation: "Literary News",
-    year: "June 1881"
+    year: "June 1881",
+    tag: "Motovational"
   },
   {
     quote: "Have no fear of perfection, you'll never reach it.",
     source: "Salvador Dali",
     citation: "World wide web",
-    year: "2018"
+    year: "2018",
+    tag: "Motovational"
   },
   {
     quote: "It always seems impossible until it's done.",
-    source: "Nelson Mandela"
+    source: "Nelson Mandela",
+    tag: "Motovational"
   },
   {
     quote: "Be the change you want to see in the world.",
-    source: "Mahatma Gandhi"
+    source: "Mahatma Gandhi",
+    tag: "Motovational"
   },
   {
     quote: "If you can dream it you can do it.",
-    source: "Walt Disney"
+    source: "Walt Disney",
+    tag: "Motovational"
   },
   {
     quote: "Success is not final, failure is not fatal: it is the courage to continue that counts.",
-    source: "Winston Churchill"
+    source: "Winston Churchill",
+    tag: "Motovational"
   },
   {
     quote: "Everything you’ve ever wanted is on the other side of fear.",
-    source: "George Addair"
+    source: "George Addair",
+    tag: "Motovational"
   },
   {
     quote: "There is only one thing that makes a dream impossible to achieve: the fear of failure.",
-    source: "Paulo Coelho"
+    source: "Paulo Coelho",
+    tag: "Motovational"
   }
 ];
 
@@ -59,6 +67,9 @@ function printQuote () {
       }
       if (selectedQuote.year) {
         outputString += '<span class="year">' + selectedQuote.year + '</span>';
+      }
+      if (selectedQuote.tag) {
+        outputString += '<span>' + ',' + ' ' + selectedQuote.tag + '</span>';
       }'</p>'
   document.getElementById("quote-box").innerHTML = outputString;
 }
@@ -74,15 +85,29 @@ function random_bg_color() {
     document.body.style.background = bgColor;
     document.getElementById('loadQuote').style.backgroundColor = bgColor;
   }
-  // document.getElementById('loadQuote').addEventListener("click", random_bg_color, false);
 
 // This function will reduce repetative code
+// Calls both functions and applies them once button is clicked
 
 function clickHandler() {
   random_bg_color();
   printQuote();
 }
 document.getElementById('loadQuote').addEventListener('click', clickHandler, false);
+
+// Auto refresh quote after 3 seconds
+
+function autoRefresh() {
+  var quoteRefresh = setInterval(printQuote, 3000);
+  var backgoundRefresh = setInterval(random_bg_color, 3000);
+}
+autoRefresh()
+
+function stopRefresh() {
+    clearTimeout(quoteRefresh);
+    clearTimeout(backgoundRefresh);
+}
+stopRefresh()
 
 
 // This event listener will respond to "Show another quote" button clicks

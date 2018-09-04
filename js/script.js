@@ -25,18 +25,21 @@ var quotes = [
   {
     quote: "We must never forget that art is not a form of propaganda; it is a form of truth.",
     source: "John F. Kennedy",
+    citation: "35th president of US",
     tag: "Art",
     year: "October 26, 1963"
   },
   {
     quote: "I look foreword to an America which will not be afraid of grace and beauty.",
     source: "John F. Kennedy",
+    citation: "35th president of US",
     tag: "Beauty",
     year: "October 26, 1963"
   },
   {
     quote: "I submit to you that if a man hasn't discovered something he will die for, he isn't fit to live.",
     source: "Martin Luther King Jr.",
+    citation: "US black civil rights leader & clergyman",
     tag: "Speech in Detroit",
     year: "June 23, 1963"
   },
@@ -101,7 +104,7 @@ function random_bg_color() {
   var z = Math.floor(Math.random() * 256);
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
     document.body.style.background = bgColor;
-    // Gives button the same color as the random background 
+    // Gives button the same color as the random background
     document.getElementById('loadQuote').style.backgroundColor = bgColor;
   }
 
